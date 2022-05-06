@@ -3,6 +3,7 @@ using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Chrome;
 using Xunit;
 using System;
+using MathNet.Numerics;
 
 namespace WorkRoad
 {
@@ -49,13 +50,26 @@ namespace WorkRoad
                 DemoHelper.Pause();
 
                 IWebElement walkDistance = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium"));
-                var walkDistanceByFoot = walkDistance.Int32;
-                string input = Console.ReadLine();
-
-                walkDistanceByFoot = Convert.ToInt32(input);
+                // int walkDistanceByFoot = Convert.ToDecimal(String.Format();
+                
+                // string WalkDistance = walkDistance.Text;
+                var WalkDistanceByFoot = Convert.ToInt32(walkDistance);
+                double a = WalkDistanceByFoot;
+                double b = 3;
+                bool IsSmaller(this double a, double b, int decimalPlaces);
+                //Assert.IsLarger("3", WalkDistanceByFoot);
+                //if (false)
+                //{
+                //    Console.WriteLine("The distance is different than the 3 km");
+                //}
+                
+                //if (walkDistanceByFoot < 3)
+                //{
+                //    Console.WriteLine();
+                //}
 
                 // int walkDistanceByFoot = int.Parse(driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium")).Text);
-                Console.WriteLine(walkDistanceByFoot);
+                //Console.WriteLine(walkDistance);
                 //if (walkDistanceByFoot < 3)
                 //{
                 //    Console.WriteLine();
@@ -64,25 +78,21 @@ namespace WorkRoad
                 //IWebElement walkTime = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.Fk3sm.fontHeadlineSmall"));
             }
         }
-
-        [Fact]
-        public void getDistance() { 
-            using (IWebDriver driver = new ChromeDriver()){
-            {
-                int walkDistanceByFoot = int.Parse(driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium")).Text);
-                if (walkDistanceByFoot < 3)
-                   {
-                        Console.WriteLine();
-                    }
-            }
-        }
-
-        //private int GetInt()
-        //{
-
-        //    return
-        //}
     }
+
+        //[Fact]
+        //public void getDistance() { 
+        //    using (IWebDriver driver = new ChromeDriver()){
+        //    {
+        //        int walkDistanceByFoot = int.Parse(driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium")).Text);
+        //        if (walkDistanceByFoot < 3)
+        //           {
+        //                Console.WriteLine();
+        //            }
+        //    }
+        //}
+
+        
 
     public class FromWork
     {
