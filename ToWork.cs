@@ -52,6 +52,10 @@ namespace ToWork
                 string WalkTime = walkDistance.GetAttribute("int");
                 var WalkTimeByFoot = Convert.ToInt32(WalkTime);
                 Assert.True(WalkDistanceByFoot < 40, "The walk time is smaller than the 40 min");
+
+                ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
+                Screenshot screenshot = takesScreenshot.GetScreenshot();
+                screenshot.SaveAsFile("ToWorkByFootChrome.jpg", ScreenshotImageFormat.Jpeg);
             }
         }
 
@@ -96,6 +100,10 @@ namespace ToWork
                 string WalkTime = walkDistance.GetAttribute("int");
                 var WalkTimeByFoot = Convert.ToInt32(WalkTime);
                 Assert.True(WalkDistanceByFoot < 15, "The walk time is smaller than the 40 min");
+
+                ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
+                Screenshot screenshot = takesScreenshot.GetScreenshot();
+                screenshot.SaveAsFile("ToWorkByFootFirefox.jpg", ScreenshotImageFormat.Jpeg);
             }
         }
     }
@@ -145,6 +153,10 @@ namespace ToWork
                 string RideTime = rideTime.GetAttribute("int");
                 var RideTimeByBike = Convert.ToInt32(RideTime);
                 Assert.True(RideTimeByBike < 15, "The walk time is smaller than the 40 min");
+
+                ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
+                Screenshot screenshot = takesScreenshot.GetScreenshot();
+                screenshot.SaveAsFile("ToWorkByBikeChrome.jpg", ScreenshotImageFormat.Jpeg);
             }
         }
         [Fact]
@@ -188,6 +200,10 @@ namespace ToWork
                 string RideTime = rideTime.GetAttribute("int");
                 var RideTimeByBike = Convert.ToInt32(RideTime);
                 Assert.True(RideTimeByBike < 15, "The walk time is smaller than the 40 min");
+
+                ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
+                Screenshot screenshot = takesScreenshot.GetScreenshot();
+                screenshot.SaveAsFile("ToWorkByBikeFirefox.jpg", ScreenshotImageFormat.Jpeg);
             }
         }
     }
