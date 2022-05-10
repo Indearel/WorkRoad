@@ -45,12 +45,12 @@ namespace FromWork
 
                 IWebElement walkDistance = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium"));
                 string WalkDistance = walkDistance.GetAttribute("int");
-                var WalkDistanceByFoot = Convert.ToInt32(WalkDistance);
+                var WalkDistanceByFoot = Convert.ToDouble(WalkDistance);
                 Assert.True(WalkDistanceByFoot < 3, "The distance is smaller than the 3 km");
 
                 IWebElement walkTime = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.Fk3sm.fontHeadlineSmall"));
                 string WalkTime = walkDistance.GetAttribute("int");
-                var WalkTimeByFoot = Convert.ToInt32(WalkTime);
+                var WalkTimeByFoot = Convert.ToDouble(WalkTime);
                 Assert.True(WalkDistanceByFoot < 40, "The walk time is smaller than the 40 min");
 
                 ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
@@ -93,12 +93,12 @@ namespace FromWork
 
                 IWebElement walkDistance = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2)"));
                 string WalkDistance = walkDistance.GetAttribute("int");
-                var WalkDistanceByFoot = Convert.ToInt32(WalkDistance);
+                var WalkDistanceByFoot = Convert.ToDouble(WalkDistance);
                 Assert.True(WalkDistanceByFoot < 3, "The distance is smaller than the 3 km");
 
                 IWebElement walkTime = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1)"));
                 string WalkTime = walkDistance.GetAttribute("int");
-                var WalkTimeByFoot = Convert.ToInt32(WalkTime);
+                var WalkTimeByFoot = Convert.ToDouble(WalkTime);
                 Assert.True(WalkDistanceByFoot < 15, "The walk time is smaller than the 40 min");
 
                 ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
@@ -146,12 +146,12 @@ namespace FromWork
 
                 IWebElement rideDistance = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium"));
                 string RideDistance = rideDistance.GetAttribute("int");
-                var RideDistanceByBike = Convert.ToInt32(RideDistance);
+                var RideDistanceByBike = Convert.ToDouble(RideDistance);
                 Assert.True(RideDistanceByBike < 3, "The distance is smaller than the 3 km");
 
                 IWebElement rideTime = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.Fk3sm.fontHeadlineSmall"));
                 string RideTime = rideTime.GetAttribute("int");
-                var RideTimeByBike = Convert.ToInt32(RideTime);
+                var RideTimeByBike = Convert.ToDouble(RideTime);
                 Assert.True(RideTimeByBike < 15, "The walk time is smaller than the 40 min");
 
                 ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
@@ -193,12 +193,12 @@ namespace FromWork
 
                 IWebElement rideDistance = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium"));
                 string RideDistance = rideDistance.GetAttribute("int");
-                var RideDistanceByBike = Convert.ToInt32(RideDistance);
+                var RideDistanceByBike = Convert.ToDouble(RideDistance);
                 Assert.True(RideDistanceByBike < 3, "The distance is smaller than the 3 km");
 
                 IWebElement rideTime = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1)"));
                 string RideTime = rideTime.GetAttribute("int");
-                var RideTimeByBike = Convert.ToInt32(RideTime);
+                var RideTimeByBike = Convert.ToDouble(RideTime);
                 Assert.True(RideTimeByBike < 15, "The walk time is smaller than the 40 min");
 
                 ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
