@@ -1,17 +1,27 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Chrome;
-using Xunit;
 using System;
 using WorkRoad;
+using NUnit.Framework;
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
+using Allure.Commons;
 
 namespace FromWork
 {
+    [TestFixture]
+    [AllureNUnit]
+
     public class ByFoot
     {
         private const string MapsUrl = "https://www.google.pl/maps";
 
-        [Fact]
+        [Test(Description = "Going from work by foot - Google Chrome")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("Sergiusz")]
+        [AllureIssue("0001")]
+        [AllureName("FromWorkByFootGoogleChrome")]
         public void GoogleChrome()
         {
             using (IWebDriver driver = new ChromeDriver())
@@ -44,14 +54,14 @@ namespace FromWork
                 DemoHelper.Pause();
 
                 IWebElement walkDistance = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium"));
-                string WalkDistance = walkDistance.GetAttribute("int");
+                string WalkDistance = walkDistance.GetAttribute("double");
                 var WalkDistanceByFoot = Convert.ToDouble(WalkDistance);
-                Assert.True(WalkDistanceByFoot < 3, "The distance is smaller than the 3 km");
+                Assert.True(WalkDistanceByFoot < 1, "The distance is smaller than the 3 km");
 
                 IWebElement walkTime = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.Fk3sm.fontHeadlineSmall"));
-                string WalkTime = walkDistance.GetAttribute("int");
+                string WalkTime = walkDistance.GetAttribute("double");
                 var WalkTimeByFoot = Convert.ToDouble(WalkTime);
-                Assert.True(WalkDistanceByFoot < 40, "The walk time is smaller than the 40 min");
+                Assert.True(WalkDistanceByFoot < 10, "The walk time is smaller than the 40 min");
 
                 ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
                 Screenshot screenshot = takesScreenshot.GetScreenshot();
@@ -59,7 +69,7 @@ namespace FromWork
             }
         }
 
-        [Fact]
+        [Test]
         public void MozillaFirefox()
         {
             using (IWebDriver driver = new FirefoxDriver())
@@ -112,7 +122,7 @@ namespace FromWork
     {
         private const string MapsUrl = "https://www.google.pl/maps";
 
-        [Fact]
+        [Test]
         public void GoogleChrome()
         {
             using (IWebDriver driver = new ChromeDriver())
@@ -159,7 +169,8 @@ namespace FromWork
                 screenshot.SaveAsFile("FromWorkByBikeChrome.jpg", ScreenshotImageFormat.Jpeg);
             }
         }
-        [Fact]
+
+        [Test]
         public void MozillaFirefox()
         {
             using (IWebDriver driver = new FirefoxDriver())

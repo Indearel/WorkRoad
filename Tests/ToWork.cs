@@ -1,9 +1,9 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Chrome;
-using Xunit;
 using System;
 using WorkRoad;
+using NUnit.Framework;
 
 namespace ToWork
 {
@@ -11,7 +11,7 @@ namespace ToWork
     {
         private const string MapsUrl = "https://www.google.pl/maps";
 
-        [Fact]
+        [Test]
         public void GoogleChrome()
         {
             using (IWebDriver driver = new ChromeDriver())
@@ -59,7 +59,7 @@ namespace ToWork
             }
         }
 
-        [Fact]
+        [Test]
         public void MozillaFirefox()
         {
             using (IWebDriver driver = new FirefoxDriver())
@@ -112,7 +112,7 @@ namespace ToWork
     {
         private const string MapsUrl = "https://www.google.pl/maps";
 
-        [Fact]
+        [Test]
         public void GoogleChrome()
         {
             using (IWebDriver driver = new ChromeDriver())
@@ -159,7 +159,8 @@ namespace ToWork
                 screenshot.SaveAsFile("ToWorkByBikeChrome.jpg", ScreenshotImageFormat.Jpeg);
             }
         }
-        [Fact]
+
+        [Test]
         public void MozillaFirefox()
         {
             using (IWebDriver driver = new FirefoxDriver())
