@@ -1,0 +1,82 @@
+{
+  "uuid": "3099815a-1b73-4fed-a915-da3f36c529ca-tr-0-1008",
+  "historyId": "FromWork.ByFoot.MozillaFirefox",
+  "fullName": "FromWork.ByFoot.MozillaFirefox",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-PCFUL9P"
+    },
+    {
+      "name": "package",
+      "value": "FromWork"
+    },
+    {
+      "name": "testMethod",
+      "value": "MozillaFirefox"
+    },
+    {
+      "name": "testClass",
+      "value": "ByFoot"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "Sergiusz"
+    }
+  ],
+  "links": [
+    {
+      "name": "0002",
+      "url": "https://github.com/AutomateThePlanet/Meissa/issues/0002",
+      "type": "issue"
+    }
+  ],
+  "name": "FromWorkByFootMozillaFirefox",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : Unable to locate element: div.etWJQ:nth-child(1) > button:nth-child(1) > span:nth-child(1) > img:nth-child(1)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at FromWork.ByFoot.MozillaFirefox() in C:\\Users\\Indigo\\source\\repos\\WorkRoad\\Tests\\FromWork.cs:line 92"
+  },
+  "stage": "finished",
+  "description": "Going from work by foot - Mozilla Firefox\n",
+  "steps": [
+    {
+      "name": "MozillaFirefox",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : Unable to locate element: div.etWJQ:nth-child(1) > button:nth-child(1) > span:nth-child(1) > img:nth-child(1)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at FromWork.ByFoot.MozillaFirefox() in C:\\Users\\Indigo\\source\\repos\\WorkRoad\\Tests\\FromWork.cs:line 92"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "f55923a542034526baa613fde47f237e-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1652339532863,
+      "stop": 1652339563015
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1652339532863,
+  "stop": 1652339563016
+}

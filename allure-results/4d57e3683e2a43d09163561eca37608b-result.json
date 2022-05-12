@@ -1,0 +1,91 @@
+{
+  "uuid": "5dcbedb0-3b13-4508-9e5c-24a86fb070cb-tr-0-1010",
+  "historyId": "FromWork.ByFoot.MozillaFirefox2",
+  "fullName": "FromWork.ByFoot.MozillaFirefox2",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-PCFUL9P"
+    },
+    {
+      "name": "package",
+      "value": "FromWork"
+    },
+    {
+      "name": "testMethod",
+      "value": "MozillaFirefox2"
+    },
+    {
+      "name": "testClass",
+      "value": "ByFoot"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "Sergiusz"
+    },
+    {
+      "name": "tag",
+      "value": "From work"
+    },
+    {
+      "name": "tag",
+      "value": "Bike"
+    },
+    {
+      "name": "tag",
+      "value": "Firefox"
+    }
+  ],
+  "links": [
+    {
+      "name": "0004",
+      "url": "https://github.com/AutomateThePlanet/Meissa/issues/0004",
+      "type": "issue"
+    }
+  ],
+  "name": "FromWorkByBikeMozillaFirefox",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "MozillaFirefox2"
+  },
+  "stage": "finished",
+  "description": "Going from work by bike - Mozilla Firefox\n",
+  "steps": [
+    {
+      "name": "MozillaFirefox2",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "d314fba063094b81a8006b2965404381-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1652341118093,
+      "stop": 1652341177401
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1652341118092,
+  "stop": 1652341177409
+}
