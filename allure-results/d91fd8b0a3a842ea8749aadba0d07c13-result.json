@@ -1,0 +1,94 @@
+{
+  "uuid": "a25be71c-5339-491f-9340-b59b0b6f961f-tr-0-1007",
+  "historyId": "FromWork.ByFoot.GoogleChrome",
+  "fullName": "FromWork.ByFoot.GoogleChrome",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-PCFUL9P"
+    },
+    {
+      "name": "package",
+      "value": "FromWork"
+    },
+    {
+      "name": "testMethod",
+      "value": "GoogleChrome"
+    },
+    {
+      "name": "testClass",
+      "value": "ByFoot"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "Sergiusz"
+    },
+    {
+      "name": "tag",
+      "value": "From work"
+    },
+    {
+      "name": "tag",
+      "value": "Walk"
+    },
+    {
+      "name": "tag",
+      "value": "Chrome"
+    }
+  ],
+  "links": [
+    {
+      "name": "0001",
+      "url": "https://github.com/AutomateThePlanet/Meissa/issues/0001",
+      "type": "issue"
+    }
+  ],
+  "name": "FromWorkByFootGoogleChrome",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   kohteessa FromWork.ByFoot.GoogleChrome() tiedostossa C:\\Users\\Indigo\\source\\repos\\WorkRoad\\Tests\\FromWork.cs:rivillä 63\r\n"
+  },
+  "stage": "finished",
+  "description": "Going from work by foot - Google Chrome\n",
+  "steps": [
+    {
+      "name": "GoogleChrome",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected: True\r\n  But was:  False\r\n",
+        "trace": "   kohteessa FromWork.ByFoot.GoogleChrome() tiedostossa C:\\Users\\Indigo\\source\\repos\\WorkRoad\\Tests\\FromWork.cs:rivillä 63\r\n"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "ef80e9ebb79e4b61ad7cde6b38f3f859-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1652447482826,
+      "stop": 1652447536231
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1652447482826,
+  "stop": 1652447536236
+}

@@ -1,0 +1,91 @@
+{
+  "uuid": "0873f899-c074-4223-8fde-ac7dda2e4329-tr-0-1007",
+  "historyId": "FromWork.ByFoot.GoogleChrome",
+  "fullName": "FromWork.ByFoot.GoogleChrome",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-PCFUL9P"
+    },
+    {
+      "name": "package",
+      "value": "FromWork"
+    },
+    {
+      "name": "testMethod",
+      "value": "GoogleChrome"
+    },
+    {
+      "name": "testClass",
+      "value": "ByFoot"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "Sergiusz"
+    },
+    {
+      "name": "tag",
+      "value": "From work"
+    },
+    {
+      "name": "tag",
+      "value": "Walk"
+    },
+    {
+      "name": "tag",
+      "value": "Chrome"
+    }
+  ],
+  "links": [
+    {
+      "name": "0001",
+      "url": "https://github.com/AutomateThePlanet/Meissa/issues/0001",
+      "type": "issue"
+    }
+  ],
+  "name": "FromWorkByFootGoogleChrome",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "GoogleChrome"
+  },
+  "stage": "finished",
+  "description": "Going from work by foot - Google Chrome\n",
+  "steps": [
+    {
+      "name": "GoogleChrome",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "fae73a19529f46e0a511aa39afefd200-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1652456881307,
+      "stop": 1652456933375
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1652456881306,
+  "stop": 1652456933378
+}

@@ -1,0 +1,94 @@
+{
+  "uuid": "dbbe2ab7-5fbc-4b8c-a61b-c5b93581ff6f-tr-0-1007",
+  "historyId": "FromWork.ByFoot.GoogleChrome",
+  "fullName": "FromWork.ByFoot.GoogleChrome",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-PCFUL9P"
+    },
+    {
+      "name": "package",
+      "value": "FromWork"
+    },
+    {
+      "name": "testMethod",
+      "value": "GoogleChrome"
+    },
+    {
+      "name": "testClass",
+      "value": "ByFoot"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "Sergiusz"
+    },
+    {
+      "name": "tag",
+      "value": "From work"
+    },
+    {
+      "name": "tag",
+      "value": "Walk"
+    },
+    {
+      "name": "tag",
+      "value": "Chrome"
+    }
+  ],
+  "links": [
+    {
+      "name": "0001",
+      "url": "https://github.com/AutomateThePlanet/Meissa/issues/0001",
+      "type": "issue"
+    }
+  ],
+  "name": "FromWorkByFootGoogleChrome",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   kohteessa FromWork.ByFoot.GoogleChrome() tiedostossa C:\\Users\\Indigo\\source\\repos\\WorkRoad\\Tests\\FromWork.cs:rivillä 63\r\n"
+  },
+  "stage": "finished",
+  "description": "Going from work by foot - Google Chrome\n",
+  "steps": [
+    {
+      "name": "GoogleChrome",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected: True\r\n  But was:  False\r\n",
+        "trace": "   kohteessa FromWork.ByFoot.GoogleChrome() tiedostossa C:\\Users\\Indigo\\source\\repos\\WorkRoad\\Tests\\FromWork.cs:rivillä 63\r\n"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "a44b03e00ee542dc99318a5902343816-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1652448283976,
+      "stop": 1652448336794
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1652448283973,
+  "stop": 1652448336802
+}

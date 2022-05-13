@@ -1,0 +1,94 @@
+{
+  "uuid": "cf9ad5bc-7ff1-46b3-8b77-846c74143557-tr-0-1007",
+  "historyId": "FromWork.ByFoot.GoogleChrome",
+  "fullName": "FromWork.ByFoot.GoogleChrome",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-PCFUL9P"
+    },
+    {
+      "name": "package",
+      "value": "FromWork"
+    },
+    {
+      "name": "testMethod",
+      "value": "GoogleChrome"
+    },
+    {
+      "name": "testClass",
+      "value": "ByFoot"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "Sergiusz"
+    },
+    {
+      "name": "tag",
+      "value": "From work"
+    },
+    {
+      "name": "tag",
+      "value": "Walk"
+    },
+    {
+      "name": "tag",
+      "value": "Chrome"
+    }
+  ],
+  "links": [
+    {
+      "name": "0001",
+      "url": "https://github.com/AutomateThePlanet/Meissa/issues/0001",
+      "type": "issue"
+    }
+  ],
+  "name": "FromWorkByFootGoogleChrome",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium\"}\n  (Session info: chrome=101.0.4951.64)",
+    "trace": "   kohteessa OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   kohteessa OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   kohteessa OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   kohteessa OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   kohteessa OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   kohteessa OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   kohteessa FromWork.ByFoot.GoogleChrome() tiedostossa C:\\Users\\Indigo\\source\\repos\\WorkRoad\\Tests\\FromWork.cs:rivillä 59"
+  },
+  "stage": "finished",
+  "description": "Going from work by foot - Google Chrome\n",
+  "steps": [
+    {
+      "name": "GoogleChrome",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium\"}\n  (Session info: chrome=101.0.4951.64)",
+        "trace": "   kohteessa OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   kohteessa OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   kohteessa OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   kohteessa OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   kohteessa OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   kohteessa OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   kohteessa FromWork.ByFoot.GoogleChrome() tiedostossa C:\\Users\\Indigo\\source\\repos\\WorkRoad\\Tests\\FromWork.cs:rivillä 59"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "ac539f546b26457095bb0ec3dd06c87e-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1652448585510,
+      "stop": 1652448639713
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1652448585509,
+  "stop": 1652448639719
+}

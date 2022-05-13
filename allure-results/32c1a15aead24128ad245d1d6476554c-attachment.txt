@@ -1,0 +1,1 @@
+Road distance is smaller than 3 km.

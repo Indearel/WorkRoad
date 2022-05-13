@@ -1,0 +1,94 @@
+{
+  "uuid": "91b8ae7c-7d6b-4f2b-a69c-925fd5dca55e-tr-0-1007",
+  "historyId": "FromWork.ByFoot.GoogleChrome",
+  "fullName": "FromWork.ByFoot.GoogleChrome",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-PCFUL9P"
+    },
+    {
+      "name": "package",
+      "value": "FromWork"
+    },
+    {
+      "name": "testMethod",
+      "value": "GoogleChrome"
+    },
+    {
+      "name": "testClass",
+      "value": "ByFoot"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "Sergiusz"
+    },
+    {
+      "name": "tag",
+      "value": "From work"
+    },
+    {
+      "name": "tag",
+      "value": "Walk"
+    },
+    {
+      "name": "tag",
+      "value": "Chrome"
+    }
+  ],
+  "links": [
+    {
+      "name": "0001",
+      "url": "https://github.com/AutomateThePlanet/Meissa/issues/0001",
+      "type": "issue"
+    }
+  ],
+  "name": "FromWorkByFootGoogleChrome",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected: True\r\n  But was:  False\r\n",
+    "trace": "   kohteessa FromWork.ByFoot.GoogleChrome() tiedostossa C:\\Users\\Indigo\\source\\repos\\WorkRoad\\Tests\\FromWork.cs:rivillä 63\r\n"
+  },
+  "stage": "finished",
+  "description": "Going from work by foot - Google Chrome\n",
+  "steps": [
+    {
+      "name": "GoogleChrome",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected: True\r\n  But was:  False\r\n",
+        "trace": "   kohteessa FromWork.ByFoot.GoogleChrome() tiedostossa C:\\Users\\Indigo\\source\\repos\\WorkRoad\\Tests\\FromWork.cs:rivillä 63\r\n"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "f49a9c399da8485dbde8cd9721de2e25-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1652448654390,
+      "stop": 1652448707811
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1652448654389,
+  "stop": 1652448707815
+}

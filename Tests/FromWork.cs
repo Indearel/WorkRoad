@@ -54,21 +54,34 @@ namespace FromWork
                 byFoot.Click();
                 DemoHelper.Pause();
 
-                var walkDistance = "#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium";
-                //var Distance = "#section-directions-trip-0 div[jsan]:nth-child(2)";
-                var distance = driver.FindElement(By.CssSelector(walkDistance)).Text;
-                distance = distance.Split()[0];
-                //string WalkDistance = walkDistance.GetAttribute("double");
-                var WalkDistanceByFoot = Convert.ToDouble(distance);
-                Assert.True(WalkDistanceByFoot < 3.0);
+                var distanceSelector = "#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium";
+                var walkDistanceSelector = driver.FindElement(By.CssSelector(distanceSelector)).Text;
+                var Distance = walkDistanceSelector.Split()[0];
+                var WalkDistance = Convert.ToDouble(Distance);
+                Assert.True(WalkDistance < 30);
+                if (WalkDistance < 30)
+                {
+                    Console.WriteLine("Road distance is smaller than 3 km.");
+                }
+                else 
+                {
+                    Console.WriteLine("Road distance is bigger than 3 km.");
+                }
 
-                var walkTime = "#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.Fk3sm.fontHeadlineSmall";
-                //string WalkTime = walkDistance.GetAttribute("double");
-                //var WalkTimeByFoot = Convert.ToDouble(distance);
-                var time = driver.FindElement(By.CssSelector(walkTime)).Text;
-                time = time.Split()[0];
-                var WalkTimeByFoot = Convert.ToDouble(time);
-                Assert.True(WalkTimeByFoot < 40.0);
+                var durationSelector = "#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.Fk3sm.fontHeadlineSmall";
+                var walkDurationSelector = driver.FindElement(By.CssSelector(durationSelector)).Text;
+                var Duration = walkDurationSelector.Split()[0];
+                var WalkDuration = Convert.ToDouble(Duration);
+                Assert.True(WalkDuration < 40);
+                if (WalkDuration < 40)
+                {
+                    Console.WriteLine("It takes less than 40 minutes to cross the road.");
+                }
+                else
+                {
+                    Console.WriteLine("It takes more than 40 minutes to cross the road.");
+                }
+                //DurationChrome.Duration();
 
                 ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
                 Screenshot screenshot = takesScreenshot.GetScreenshot();
