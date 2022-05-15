@@ -1,0 +1,91 @@
+{
+  "uuid": "761f3955-628d-4b61-9ef5-7bf63d65e2fe-tr-0-1002",
+  "historyId": "ToWork.ByFoot.MozillaFirefox",
+  "fullName": "ToWork.ByFoot.MozillaFirefox",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-PCFUL9P"
+    },
+    {
+      "name": "package",
+      "value": "ToWork"
+    },
+    {
+      "name": "testMethod",
+      "value": "MozillaFirefox"
+    },
+    {
+      "name": "testClass",
+      "value": "ByFoot"
+    },
+    {
+      "name": "severity",
+      "value": "normal"
+    },
+    {
+      "name": "owner",
+      "value": "Sergiusz"
+    },
+    {
+      "name": "tag",
+      "value": "To work"
+    },
+    {
+      "name": "tag",
+      "value": "Walk"
+    },
+    {
+      "name": "tag",
+      "value": "Firefox"
+    }
+  ],
+  "links": [
+    {
+      "name": "0006",
+      "url": "https://github.com/AutomateThePlanet/Meissa/issues/0006",
+      "type": "issue"
+    }
+  ],
+  "name": "ToWorkByFootMozillaFirefox",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "MozillaFirefox"
+  },
+  "stage": "finished",
+  "description": "Going to work by foot - Mozilla Firefox\n",
+  "steps": [
+    {
+      "name": "MozillaFirefox",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "548fc9ff72da4197a517392fd05c026e-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1652617823209,
+      "stop": 1652617882706
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1652617823208,
+  "stop": 1652617882716
+}

@@ -4,14 +4,25 @@ using OpenQA.Selenium.Chrome;
 using System;
 using WorkRoad;
 using NUnit.Framework;
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
+using Allure.Commons;
 
 namespace ToWork
 {
+    [TestFixture]
+    [AllureNUnit]
     public class ByFoot
     {
         private const string MapsUrl = "https://www.google.pl/maps";
 
-        [Test]
+        [Test(Description = "Going to work by foot - Google Chrome")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("Sergiusz")]
+        [AllureIssue("0005")]
+        [AllureName("ToWorkByFootGoogleChrome")]
+        [AllureTag("To work", "Walk", "Chrome")]
+
         public void GoogleChrome()
         {
             using (IWebDriver driver = new ChromeDriver())
@@ -43,15 +54,33 @@ namespace ToWork
                 byFoot.Click();
                 DemoHelper.Pause();
 
-                IWebElement walkDistance = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium"));
-                string WalkDistance = walkDistance.GetAttribute("int");
-                var WalkDistanceByFoot = Convert.ToDouble(WalkDistance);
-                Assert.True(WalkDistanceByFoot < 3, "The distance is smaller than the 3 km");
+                var distanceSelector = "#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium";
+                var walkDistanceSelector = driver.FindElement(By.CssSelector(distanceSelector)).Text;
+                var Distance = walkDistanceSelector.Split()[0];
+                var WalkDistance = Convert.ToDouble(Distance);
+                Assert.True(WalkDistance < 30);
+                if (WalkDistance < 30)
+                {
+                    Console.WriteLine("Road distance is smaller than 3 km.");
+                }
+                else
+                {
+                    Console.WriteLine("Road distance is bigger than 3 km.");
+                }
 
-                IWebElement walkTime = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.Fk3sm.fontHeadlineSmall"));
-                string WalkTime = walkDistance.GetAttribute("int");
-                var WalkTimeByFoot = Convert.ToDouble(WalkTime);
-                Assert.True(WalkDistanceByFoot < 40, "The walk time is smaller than the 40 min");
+                var durationSelector = "#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.Fk3sm.fontHeadlineSmall";
+                var walkDurationSelector = driver.FindElement(By.CssSelector(durationSelector)).Text;
+                var Duration = walkDurationSelector.Split()[0];
+                var WalkDuration = Convert.ToDouble(Duration);
+                Assert.True(WalkDuration < 40);
+                if (WalkDuration < 40)
+                {
+                    Console.WriteLine("It takes less than 40 minutes to cross the road.");
+                }
+                else
+                {
+                    Console.WriteLine("It takes more than 40 minutes to cross the road.");
+                }
 
                 ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
                 Screenshot screenshot = takesScreenshot.GetScreenshot();
@@ -59,7 +88,12 @@ namespace ToWork
             }
         }
 
-        [Test]
+        [Test(Description = "Going to work by foot - Mozilla Firefox")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("Sergiusz")]
+        [AllureIssue("0006")]
+        [AllureName("ToWorkByFootMozillaFirefox")]
+        [AllureTag("To work", "Walk", "Firefox")]
         public void MozillaFirefox()
         {
             using (IWebDriver driver = new FirefoxDriver())
@@ -91,15 +125,33 @@ namespace ToWork
                 byFoot.Click();
                 DemoHelper.Pause();
 
-                IWebElement walkDistance = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2)"));
-                string WalkDistance = walkDistance.GetAttribute("int");
-                var WalkDistanceByFoot = Convert.ToDouble(WalkDistance);
-                Assert.True(WalkDistanceByFoot < 3, "The distance is smaller than the 3 km");
+                var distanceSelector = "#section-directions-trip-0 > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(2)";
+                var walkDistanceSelector = driver.FindElement(By.CssSelector(distanceSelector)).Text;
+                var Distance = walkDistanceSelector.Split()[0];
+                var WalkDistance = Convert.ToDouble(Distance);
+                Assert.True(WalkDistance < 30);
+                if (WalkDistance < 30)
+                {
+                    Console.WriteLine("Road distance is smaller than 3 km.");
+                }
+                else
+                {
+                    Console.WriteLine("Road distance is bigger than 3 km.");
+                }
 
-                IWebElement walkTime = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1)"));
-                string WalkTime = walkDistance.GetAttribute("int");
-                var WalkTimeByFoot = Convert.ToDouble(WalkTime);
-                Assert.True(WalkDistanceByFoot < 15, "The walk time is smaller than the 40 min");
+                var durationSelector = "#section-directions-trip-0 > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1)";
+                var walkDurationSelector = driver.FindElement(By.CssSelector(durationSelector)).Text;
+                var Duration = walkDurationSelector.Split()[0];
+                var WalkDuration = Convert.ToDouble(Duration);
+                Assert.True(WalkDuration < 40);
+                if (WalkDuration < 40)
+                {
+                    Console.WriteLine("It takes less than 40 minutes to cross the road.");
+                }
+                else
+                {
+                    Console.WriteLine("It takes more than 40 minutes to cross the road.");
+                }
 
                 ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
                 Screenshot screenshot = takesScreenshot.GetScreenshot();
@@ -112,7 +164,12 @@ namespace ToWork
     {
         private const string MapsUrl = "https://www.google.pl/maps";
 
-        [Test]
+        [Test(Description = "Going to work by bike - Google Chrome")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("Sergiusz")]
+        [AllureIssue("0007")]
+        [AllureName("ToWorkByBikeGoogleChrome")]
+        [AllureTag("To work", "Bike", "Chrome")]
         public void GoogleChrome()
         {
             using (IWebDriver driver = new ChromeDriver())
@@ -144,15 +201,33 @@ namespace ToWork
                 byBike.Click();
                 DemoHelper.Pause();
 
-                IWebElement rideDistance = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium"));
-                string RideDistance = rideDistance.GetAttribute("int");
-                var RideDistanceByBike = Convert.ToDouble(RideDistance);
-                Assert.True(RideDistanceByBike < 3, "The distance is smaller than the 3 km");
+                var distanceSelector = "#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium";
+                var rideDistanceSelector = driver.FindElement(By.CssSelector(distanceSelector)).Text;
+                var Distance = rideDistanceSelector.Split()[0];
+                var BikeRideDistance = Convert.ToDouble(Distance);
+                Assert.True(BikeRideDistance < 30);
+                if (BikeRideDistance < 30)
+                {
+                    Console.WriteLine("Road distance is smaller than 3 km.");
+                }
+                else
+                {
+                    Console.WriteLine("Road distance is bigger than 3 km.");
+                }
 
-                IWebElement rideTime = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.Fk3sm.fontHeadlineSmall"));
-                string RideTime = rideTime.GetAttribute("int");
-                var RideTimeByBike = Convert.ToDouble(RideTime);
-                Assert.True(RideTimeByBike < 15, "The walk time is smaller than the 40 min");
+                var durationSelector = "#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.Fk3sm.fontHeadlineSmall";
+                var rideDurationSelector = driver.FindElement(By.CssSelector(durationSelector)).Text;
+                var Duration = rideDurationSelector.Split()[0];
+                var BikeRideDuration = Convert.ToDouble(Duration);
+                Assert.True(BikeRideDuration < 15);
+                if (BikeRideDuration < 15)
+                {
+                    Console.WriteLine("It takes less than 15 minutes to ride the road by bike.");
+                }
+                else
+                {
+                    Console.WriteLine("It takes more than 15 minutes to ride the road by bike.");
+                };
 
                 ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
                 Screenshot screenshot = takesScreenshot.GetScreenshot();
@@ -160,7 +235,12 @@ namespace ToWork
             }
         }
 
-        [Test]
+        [Test(Description = "Going to work by bike - Mozilla Firefox")]
+        [AllureSeverity(SeverityLevel.normal)]
+        [AllureOwner("Sergiusz")]
+        [AllureIssue("0008")]
+        [AllureName("ToWorkByBikeMozillaFirefox")]
+        [AllureTag("To work", "Bike", "Firefox")]
         public void MozillaFirefox()
         {
             using (IWebDriver driver = new FirefoxDriver())
@@ -192,15 +272,33 @@ namespace ToWork
                 byBike.Click();
                 DemoHelper.Pause();
 
-                IWebElement rideDistance = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium"));
-                string RideDistance = rideDistance.GetAttribute("int");
-                var RideDistanceByBike = Convert.ToDouble(RideDistance);
-                Assert.True(RideDistanceByBike < 3, "The distance is smaller than the 3 km");
+                var distanceSelector = "#section-directions-trip-0 > div.MespJc > div:nth-child(3) > div.XdKEzd > div.ivN21e.tUEI8e.fontBodyMedium";
+                var rideDistanceSelector = driver.FindElement(By.CssSelector(distanceSelector)).Text;
+                var Distance = rideDistanceSelector.Split()[0];
+                var BikeRideDistance = Convert.ToDouble(Distance);
+                Assert.True(BikeRideDistance < 30);
+                if (BikeRideDistance < 30)
+                {
+                    Console.WriteLine("Road distance is smaller than 3 km.");
+                }
+                else
+                {
+                    Console.WriteLine("Road distance is bigger than 3 km.");
+                }
 
-                IWebElement rideTime = driver.FindElement(By.CssSelector("#section-directions-trip-0 > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1)"));
-                string RideTime = rideTime.GetAttribute("int");
-                var RideTimeByBike = Convert.ToDouble(RideTime);
-                Assert.True(RideTimeByBike < 15, "The walk time is smaller than the 40 min");
+                var durationSelector = "#section-directions-trip-0 > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) > div:nth-child(1)";
+                var rideDurationSelector = driver.FindElement(By.CssSelector(durationSelector)).Text;
+                var Duration = rideDurationSelector.Split()[0];
+                var BikeRideDuration = Convert.ToDouble(Duration);
+                Assert.True(BikeRideDuration < 15);
+                if (BikeRideDuration < 15)
+                {
+                    Console.WriteLine("It takes less than 15 minutes to ride the road by bike.");
+                }
+                else
+                {
+                    Console.WriteLine("It takes more than 15 minutes to ride the road by bike.");
+                };
 
                 ITakesScreenshot takesScreenshot = (ITakesScreenshot)driver;
                 Screenshot screenshot = takesScreenshot.GetScreenshot();

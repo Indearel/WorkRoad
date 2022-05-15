@@ -1,0 +1,2 @@
+Road distance is smaller than 3 km.
+It takes less than 40 minutes to cross the road.

@@ -87,7 +87,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Duration.cs" />
     <Compile Include="Tests\FromWork.cs" />
     <Compile Include="DemoHelper.cs" />
     <Compile Include="Tests\ToWork.cs" />
